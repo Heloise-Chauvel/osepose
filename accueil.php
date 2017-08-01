@@ -23,7 +23,7 @@
 	if($_POST["inscription"]==1)
 	{
 		$inscription=$db->prepare("INSERT INTO user (login, email, password, gender, sports, birthdate) 
-		VALUES (:login, :email, :password, :sexe, :sports, :dateNaissance)");
+		VALUES (:login, :email, :password, :gender, :sports, :birthdate)");
 		$inscription->execute(array(
 			'login'=>$_POST['login'],
 			'email'=>$_POST['email'],
