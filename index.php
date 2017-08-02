@@ -3,9 +3,9 @@
       <title>Ose Pose </title>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- Liaisons aux fichiers css de Bootstrap -->
-      <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-      <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" />
+       <!-- Bootstrap CSS CDN -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
       <link href="assets/css/font.css" rel="stylesheet" />
       <link href="assets/css/perso.css" rel="stylesheet" />
 	  <link rel="icon" type="image/png" href="assets/img/logo.png" />
@@ -17,11 +17,47 @@
       <![endif]-->
    </head>
    <body>
-      <script src="dist/js/jquery.js" type="text/javascript"></script>
-      <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-	  <script src="assets/js/inscription.js" type="text/javascript"></script>
-	  <script src="assets/js/connexion.js" type="text/javascript"></script>
       <header></header>
+      <!--Nav-->
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+              <img src="/assets/img/osepose_header.png" width="30" height="30" alt="">
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                  </li>
+              </ul>
+              <form role="form" method="POST" action="accueil.php" id="form-connexion" class="form-inline my-2 my-lg-0">
+                  <input type="hidden" name="inscription" value="2" />
+
+                  <input class="form-control mr-sm-2" type="text" id="email" placeholder="Login/mail">
+                  <!-- ENCART ERREUR IDENTIFIANT -->
+                  <div id="nologin-connexion" class="erreur"> Il faut renseigner votre adresse email OU votre login pour pouvoir vous connecter</div>
+                  <!-- ENCART ERREUR IDENTIFIANT -->
+
+                  <input class="form-control mr-sm-2" type="password" id="pwd" placeholder="Mot de passe">
+                  <a href="#"> <i style="font-size:0.70em;">Mot de passe oublié ?</i></a>
+
+                  <button id="connexion" class="btn btn-outline-success my-2 my-sm-0" type="submit">Se connecter</button>
+
+                  <!-- ENCART ERREUR IDENTIFIANT INCORRECT -->
+                  <div id="inexistant" class="erreur"> Les identifiants entrés sont incorrects. </div>
+                  <!-- ENCART ERREUR IDENTIFIANT INCORRECT -->
+              </form>
+          </div>
+      </nav>
 	  <center>
 		<h1>
 		<span id="title-1">Ose</span> <span id="title-2">Pose</span>
@@ -29,50 +65,8 @@
 	  </center>
       <div class="row">
          <div class="col-md-12">
-            <div class="panel-content">
-                      <form role="form" method="POST" action="accueil.php" id="form-connexion">
-					  <input type="hidden" name="inscription" value="2" />
-						  <div class="form-group">
-							<div class="label-perso">
-							<label for="email">Login / mail : </label>
-							</div>
-							<div class="input-perso">
-								<input type="text" class="form-control" id="email">
-							</div>
-							
-							
-							<!-- ENCART ERREUR IDENTIFIANT -->
-							<div id="nologin-connexion" class="erreur"> Il faut renseigner votre adresse email OU votre login pour pouvoir vous connecter</div>
-							<!-- ENCART ERREUR IDENTIFIANT -->
-							
-							
-						  </div>
-						  <br />
-						  <div class="form-group">
-							<div class="label-perso">
-							<label for="pwd">Mot de passe : <br /> <a href="#"> <i style="font-size:0.70em;">Mot de passe oublié ?</i></a></label>
-							</div>
-							<div class="input-perso">
-							<input type="password" class="form-control" id="pwd">
-							</div>
-						  </div>
-						  
-						   <center>
-						  <div class="input-button-perso">
-							<input type="button" class="btn-perso" id="connexion" value="Se connecter" />
-						  </div>
-						  </center>
-						  <!-- ENCART ERREUR IDENTIFIANT INCORRECT -->
-						  <div id="inexistant" class="erreur"> Les identifiants entrés sont incorrects. </div>
-						  <!-- ENCART ERREUR IDENTIFIANT INCORRECT -->
-						  
-						</form>
-            </div>
-			
-			
-			
 			 <div class="panel-content" style="float:left;">
-                      <form role="form" method="post" action="accueil.php" id="inscription-ok">
+                      <form role="form" method="post" action="inscription.php" id="inscription-ok">
 						<input type="hidden" name="inscription" value="1" />
 					  
 						  <div class="form-group">
@@ -84,9 +78,9 @@
 							</div>
 							
 							<!-- ENCART ERREUR MAIL -->
-							<div id="noemail" class="erreur"> Merci de bien vouloir renseigner une adresse e-mail </div>
-							<div id="falseemail" class="erreur"> Merci de bien vouloir renseigner une adresse e-mail valide </div>
-							<div id="exist-email" class="erreur"> L'adresse e-mail a déjà été utilisé pour une inscription, merci d'utiliser l'outil mot de passe oublié </div>
+							<div id="noemail" class="erreur"> Merci de bien vouloir renseigner une adresse e-mail. </div>
+							<div id="falseemail" class="erreur"> Merci de bien vouloir renseigner une adresse e-mail valide. </div>
+							<div id="exist-email" class="erreur"> L'adresse e-mail a déjà été utilisée pour une inscription, merci d'utiliser l'outil mot de passe oublié. </div>
 							<!-- ENCART ERREUR MAIL -->
 							
 						  </div>
@@ -102,9 +96,9 @@
 							
 							
 							<!-- ENCART ERREUR LOGIN -->
-							<div id="nologin" class="erreur"> Merci de bien vouloir renseigner un login </div>
-							<div id="length-login" class="erreur"> Le login doit être composé d'au moins 6 caractères</div>
-							<div id="exist-login" class="erreur"> Le login a déjà été utilisé pour une inscription, merci d'utiliser l'outil mot de passe oublié </div>
+							<div id="nologin" class="erreur"> Merci de bien vouloir renseigner un login. </div>
+							<div id="length-login" class="erreur"> Le login doit être composé d'au moins 6 caractères. </div>
+							<div id="exist-login" class="erreur"> Le login a déjà été utilisé pour une inscription, merci d'utiliser l'outil mot de passe oublié. </div>
 							<!-- ENCART ERREUR LOGIN -->
 							
 							
@@ -121,8 +115,8 @@
 							
 							
 							<!-- ENCART ERREUR PWD1 -->
-							<div id="nopwd1" class="erreur"> Merci de bien vouloir renseigner un mot de passe </div>
-							<div id="length-pwd1" class="erreur"> Le mot de passe est trop court pour des raisons de sécurité merci de renseigner un mot de passe d'au minimum 8 caractères </div>
+							<div id="nopwd1" class="erreur"> Merci de bien vouloir renseigner un mot de passe. </div>
+							<div id="length-pwd1" class="erreur"> Le mot de passe est trop court pour des raisons de sécurité merci de renseigner un mot de passe d'au minimum 8 caractères. </div>
 							<!-- ENCART ERREUR PWD1 -->
 							
 							
@@ -138,8 +132,8 @@
 							</div>
 							
 							<!-- ENCART ERREUR PWD1 -->
-							<div id="nopwd2" class="erreur"> Il vous faut confirmer votre mot de passe </div>
-							<div id="same-pwd2" class="erreur"> Le mot de passe renseigné n'est pas identique au précédent</div>
+							<div id="nopwd2" class="erreur"> Il vous faut confirmer votre mot de passe. </div>
+							<div id="same-pwd2" class="erreur"> Le mot de passe renseigné n'est pas identique au précédent. </div>
 							<!-- ENCART ERREUR PWD1 -->
 							
 							
@@ -150,13 +144,13 @@
 								<label>Vous êtes  </label>
 							</div>
 							<div class="input-perso">
-								<input type="radio" name="sexe" value="F" id="F" /> Femme
-								<input type="radio" name="sexe" value="H" id="H" /> Homme
+								<input type="radio" name="gender" value="F" id="F" /> Femme
+								<input type="radio" name="gender" value="H" id="H" /> Homme
 							</div>
 							
 							
 							<!-- ENCART ERREUR SEX -->
-							<div id="nosex" class="erreur"> Merci de bien vouloir renseigner votre sexe </div>
+							<div id="nosex" class="erreur"> Merci de bien vouloir renseigner votre sexe. </div>
 							<!-- ENCART ERREUR SEX -->
 							
 							
@@ -168,11 +162,11 @@
 								<label>Date de naissance  </label>
 							</div>
 							<div class="input-perso">
-								<select id="jour" name="jour">
+								<select id="day" name="day">
 									
 								</select>
 								
-								<select id="mois" name="mois">
+								<select id="month" name="month">
 									<option value="01"> Janvier </option>
 									<option value="02"> Février </option>
 									<option value="03"> Mars </option>
@@ -187,13 +181,13 @@
 									<option value="12"> Décembre </option>
 								</select>
 								
-								<input type="text" name="année" id="année" maxlength="4" size="4" />
+								<input type="text" name="year" id="year" maxlength="4" size="4" />
 							</div>
 							
 							<!-- ENCART ERREUR SEX -->
-							<div id="tooyoung" class="erreur"> Il faut avoir plus de 13 ans pour s'inscrire sur ce site </div>
+							<div id="tooyoung" class="erreur"> Il faut avoir plus de 13 ans pour s'inscrire sur ce site. </div>
 							<div id="tooold" class="erreur"> Vous avez dû vous tromper, il est impossible que vous ayez plus de 200 ans ! </div>
-							<div id="noyear" class="erreur"> Merci d'accepter de renseigner votre année de naissance </div>
+							<div id="noyear" class="erreur"> Merci de renseigner votre année de naissance. </div>
 							<!-- ENCART ERREUR SEX -->
 							
 							
@@ -240,11 +234,29 @@
 						</div>
          </div>
       </div>
+      <!-- jQuery CDN -->
+      <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <!-- jQuery local fallback -->
+      <script>window.jQuery || document.write('<script src="/dist/js/jquery-3.2.1.min.js"><\/script>')</script>
+      <!-- Bootstrap JS CDN -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+      <!-- Bootstrap JS local fallback -->
+      <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="/dist/bootstrap.min.js"><\/script>')}</script>
+      <!-- Bootstrap CSS local fallback -->
+      <div id="bootstrapCssTest" class="hidden"></div>
+
+      <script src="assets/js/inscription.js" type="text/javascript"></script>
+      <script src="assets/js/connexion.js" type="text/javascript"></script>
+
 	  <script>
 		
 		$(document).ready(function(){
-			
-			// Par défaut tout les messages d'erreurs sont masqué
+            $(function() {
+                if ($('#bootstrapCssTest').is(':visible')) {
+                    $("head").prepend('<link rel="stylesheet" href="/dist/css/bootstrap.min.css">');
+                }
+            });
+			// Par défaut tout les messages d'erreurs sont masqués
 				$("#noemail").hide();
 				$("#nopwd1").hide();
 				$("#length-pwd1").hide();
@@ -264,53 +276,53 @@
 				$("#inexistant").hide();
 				
 			// Jour
-			var maxJour = 31;
-			for(var i=1 ; i<=maxJour ; i++)
+			var maxDay = 31;
+			for(var i=1 ; i<=maxDay ; i++)
 			{
-				$("#jour").append($("<option value='"+i+"'>"+i+"</option>"));
+				$("#day").append($("<option value='"+i+"'>"+i+"</option>"));
 			}
 			
 			// Adaptation des jours en fonction du mois : 
-			$("#mois").on("change", function() {
-				$("#jour").find("option").show();
+			$("#month").on("change", function() {
+				$("#day").find("option").show();
 				switch($(this).val())
 				{
 					case "02" : 
-						$("#jour").find("option:gt(27)").hide();
+						$("#day").find("option:gt(27)").hide();
 						break;
 					case "04" :
 					case "06" :
 					case "08" :
 					case "10" :
 					case "12" :
-						$("#jour").find("option:gt(29)").hide();
+						$("#day").find("option:gt(29)").hide();
 						break;
 					default : 
 						break;
 				}
 				
 				/*
-				if($("#année").val()!="" && $("#année").val()%400==0 && $(this).val()=="02")
+				if($("#year").val()!="" && $("#year").val()%400==0 && $(this).val()=="02")
 				{
-					$("#jour").find("option").eq(28).show();
+					$("#day").find("option").eq(28).show();
 				}
 				else
 				{
 					*/
-					$("#jour").find("option").eq(28).hide();
+					$("#day").find("option").eq(28).hide();
 				//}
 			});
 			
 			/*
-			//Changement du nombre de jour en cas d'année bisextile et de mois de février
-			$("#année").on("change", function() {
-				 if($(this).val()!="" && $(this).val()%400==0 && $("#mois").val()=="02")
+			//Changement du nombre de jour en cas d'year bisextile et de mois de février
+			$("#year").on("change", function() {
+				 if($(this).val()!="" && $(this).val()%400==0 && $("#month").val()=="02")
 				{
-					$("#jour").find("option").eq(28).show();
+					$("#day").find("option").eq(28).show();
 				}
 				else
 				{
-					$("#jour").find("option").eq(28).hide();
+					$("#day").find("option").eq(28).hide();
 				}
 			});
 			*/

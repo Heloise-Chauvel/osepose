@@ -127,7 +127,7 @@ background:white;
 }
 header
 {
-	background-image:url(/osepose/dist/img/fond.jpg);
+	background-image:url(../img/fond.jpg);
 	background-repeat: repeat-y;
 	background-size: 100% auto;
 	width:100%;

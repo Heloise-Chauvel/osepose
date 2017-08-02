@@ -29,17 +29,17 @@ $(document).ready(function(){
 				
 				// Message lié à l'année de naissance
 				var date=new Date();
-				if($("#année").val()>date.getFullYear()-13)
+				if($("#year").val()>date.getFullYear()-13)
 				{
 						$("#tooyoung").show();
 						status=false;
 				}
-				if($("#année").val()<date.getFullYear()-200)
+				if($("#year").val()<date.getFullYear()-200)
 				{
 						$("#tooold").show();
 						status=false;
 				}
-				if($("#année").val().length<=0)
+				if($("#year").val().length<=0)
 				{
 						$("#noyear").show();
 						status=false;
@@ -84,7 +84,7 @@ $(document).ready(function(){
 				}
 				
 				// Message concernant le sexe
-				if(!$('input[name=sexe]:checked').val())
+				if(!$('input[name=gender]:checked').val())
 				{
 					$("#nosex").show();
 					status=false;
