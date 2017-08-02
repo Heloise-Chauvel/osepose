@@ -8,7 +8,7 @@
 
       <link href="assets/css/font.css" rel="stylesheet" />
       <link href="assets/css/perso.css" rel="stylesheet" />
-	  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+	  <link rel="icon" type="image/png" href="assets/img/osepose_icon.png" />
 	  
       <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
@@ -17,7 +17,9 @@
       <![endif]-->
    </head>
    <body>
-      <header></header>
+      <header id="tête_inscription">
+
+      </header>
       <!--Nav-->
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
