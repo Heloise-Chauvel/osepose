@@ -24,20 +24,11 @@
               <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand" href="#">
-              <img src="/assets/img/osepose_header.png" width="30" height="30" alt="">
+              <img src="assets/img/osepose_header.png" alt="logo">
           </a>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link disabled" href="#">Disabled</a>
-                  </li>
               </ul>
               <form role="form" method="POST" action="accueil.php" id="form-connexion" class="form-inline my-2 my-lg-0">
                   <input type="hidden" name="inscription" value="2" />
@@ -58,12 +49,29 @@
               </form>
           </div>
       </nav>
-	  <center>
-		<h1>
-		<span id="title-1">Ose</span> <span id="title-2">Pose</span>
-		</h1>
-	  </center>
+
+      <div id="carousel-sports" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox" >
+              <div class="carousel-item active">
+                  <img class="d-block img-fluid" src="assets/img/climbing.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block img-fluid" src="assets/img/motocross.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block img-fluid" src="assets/img/parkour.JPG" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block img-fluid" src="assets/img/soccer.jpg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block img-fluid" src="assets/img/surf.jpg" alt="Third slide">
+              </div>
+          </div>
+      </div>
+
       <div class="row">
+
          <div class="col-md-12">
 			 <div class="panel-content" style="float:left;">
                       <form role="form" method="post" action="inscription.php" id="inscription-ok">
@@ -256,6 +264,7 @@
                     $("head").prepend('<link rel="stylesheet" href="/dist/css/bootstrap.min.css">');
                 }
             });
+            $('#carousel-sports').carousel();
 			// Par défaut tout les messages d'erreurs sont masqués
 				$("#noemail").hide();
 				$("#nopwd1").hide();
