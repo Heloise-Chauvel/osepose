@@ -17,7 +17,7 @@
       <![endif]-->
    </head>
    <body>
-      <header id="tête_inscription">
+      <header>
 
       </header>
       <!--Nav-->
@@ -55,9 +55,6 @@
       <div class="container-fluid">
           <div class="row">
               <div class="col-lg-7 carousel">
-                  <div class="col-lg-12">
-                      <h2>Défiez vos limites avec OsePose !</h2>
-                  </div>
                   <div id="carousel-sports" class="carousel slide" data-ride="carousel">
                       <div class="carousel-inner" role="listbox" >
                           <div class="carousel-item active">
@@ -79,6 +76,9 @@
                               <div class="slider-size">
                                 <img class="d-block img-fluid" src="assets/img/surf.jpg" alt="Third slide">
                               </div>
+                          </div>
+                          <div class="carousel-caption d-none d-md-block">
+                              <h3>Défiez vos limites avec Ose Pose !</h3>
                           </div>
                       </div>
                   </div>

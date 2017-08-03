@@ -10,12 +10,16 @@
     background-color: #eee;
 }
 
+.carousel-caption{
+    background-color: rgba(0,0,0,0.5);
+}
+
 #carousel-sports{
-    bottom: -71px;
+    height: 571px;
 }
 
 img#logo {
-    height: 45px;
+    height: 70px;
 }
 
 .panel-content {
@@ -81,3 +85,10 @@ background:white;
  height:80px;
  overflow:auto;
 }
+
+.défie{
+    margin-left: 140px;
+    margin-top: 80px;
+
+}
+
