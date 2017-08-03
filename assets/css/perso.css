@@ -1,3 +1,18 @@
+.slider-size {
+	height: 700px;
+}
+.slider-size > img {
+	width: 100%;
+}
+
+img#logo {
+    height: 45px;
+}
+
+.carousel {
+    position: absolute;
+}
+
 .navbar-perso, .panel-titre, footer
 {
 background: black !important;
@@ -39,15 +54,12 @@ color:white;
 margin-bottom:0px;
 }
 
-.panel-content
-{
-float:left;
-padding-top:10px;
-height:auto;
-margin-top:20px;
-
-width:100%;
-background-color: rgba(255, 255, 255, 0.4);
+.panel-content {
+    position: relative;
+    height: 441px;
+    margin-top: 154px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 .h-perso
@@ -80,9 +92,6 @@ html
 {
 margin:0;
 padding:0;
-background-image:url(/osepose/dist/img/fond.jpg);
-background-repeat: repeat-y;
-background-size: 100% auto;
 }
 body
 {
@@ -112,20 +121,6 @@ margin-bottom:10px;
 float:left;
 	width:35%;
 	text-align:left;
-}
-
-.input-perso input
-{
-	
-	border:2px solid #F3BC93;
-	border-radius:0px;
-}
-
-.input-perso select
-{
-	
-	border:2px solid #F3BC93;
-	border-radius:0px;
 }
 
 
