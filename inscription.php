@@ -36,6 +36,6 @@ if($_POST["inscription"]==1)
     );
     $_SESSION['infos_user']=$infos_user;
 
-    header("Location: accueil.php");
+    header("Location:".$_SERVER['DOCUMENT_ROOT']."/osepose/accueil.php");
 }
 ?>
