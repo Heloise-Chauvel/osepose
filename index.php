@@ -3,7 +3,7 @@
 <body>
     <!--Gestion des gestions-->
     <?php
-    if(session_status() != 2):
+    if(session_status() == PHP_SESSION_DISABLED || session_status() == PHP_SESSION_NONE):
     ?>
     <!--Nav-->
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
@@ -65,7 +65,7 @@
                               </div>
                           </div>
                           <div class="carousel-caption d-none d-md-block">
-                              <h3>Défiez vos limites avec Ose -Pose !</h3>
+                              <h3>Défiez vos limites avec Ose-Pose !</h3>
                           </div>
                       </div>
                   </div>
@@ -203,9 +203,9 @@
 
           </div>
       </footer>
-<?php else: ?>
-    <?php header("Location:".$_SERVER['DOCUMENT_ROOT']."/osepose/accueil.php"); ?>
-<?php endif; ?>
+<?php else:
+    header("Location:".$_SERVER['DOCUMENT_ROOT']."/osepose/accueil.php");
+endif; ?>
 
 <!-- footer --->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/osepose/lib/footer.php'); ?>
