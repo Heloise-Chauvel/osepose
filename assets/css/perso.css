@@ -22,6 +22,10 @@ img#logo {
     height: 54px;
 }
 
+img#logo2 {
+    height: 40px;
+}
+
 .panel-content {
     height: 441px;
     margin-top: 154px;
