@@ -20,7 +20,7 @@ $(document).ready(function(){
 					var info_connexion=true;
 					
 					var request = $.ajax({
-					  url: "lib/AJAX/connexion/connexion.php",
+					  url: "/osepose/lib/AJAX/connexion/connexion.php",
 					  method: "POST",
 					  async: false,
 					  data: { identifiant : $("#email").val() , password : $("#pwd").val() },
