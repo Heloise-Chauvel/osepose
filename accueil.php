@@ -7,3 +7,5 @@
 
 <!-- footer -->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/osepose/lib/footer.php'); ?>
+<!-- footer -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/osepose/lib/footer.php'); ?>

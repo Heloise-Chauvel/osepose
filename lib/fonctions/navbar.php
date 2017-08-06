@@ -3,22 +3,36 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand nav-image" href="#">
-        <img src="assets/img/osepose_header.png" id="logo2" alt="logo">
+        <img src="assets/img/ose-pose.png" id="logo2" alt="logo">
     </a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <span><?php echo $_SESSION['infos_user']['login']; ?></span>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"  >
+
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="icon" href="#">
+                    <img src="assets/img/maison_noir.png" id="maision_noir" alt="mainson">
+                </a>
+                <a class="nav-link active" href="#">Accueil </a>
             </li>
             <li class="nav-item">
+                <a class="icon" href="#">
+                    <img src="assets/img/defis_gris" id="defis_gris" alt="defis">
+                </a>
                 <a class="nav-link" href="#">Défier</a>
             </li>
             <li class="nav-item">
+                <a class="icon" href="#">
+                    <img src="assets/img/amis_gris" id="amis_gris" alt="amis">
+                </a>
                 <a class="nav-link" href="#">Amis</a>
             </li>
             <li class="nav-item">
+                <a class="icon" href="#">
+                    <img src="assets/img/profil_gris" id="profil_gris" alt="profil">
+                </a>
                 <a class="nav-link" href="#">Profil</a>
             </li>
             <li class="nav-item dropdown">
@@ -29,10 +43,5 @@
                     <a class="dropdown-item" href="<?php $_SERVER['DOCUMENT_ROOT'].'/osepose/lib/deconnexion.php' ?>">Déconnexion</a>
                 </div>
             </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
 </nav>
