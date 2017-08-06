@@ -1,10 +1,7 @@
 <!-- header --->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/osepose/lib/header.php'); ?>
 <body>
-    <!--Gestion des gestions-->
-    <?php
-    if(session_status() == PHP_SESSION_DISABLED || session_status() == PHP_SESSION_NONE):
-    ?>
+
     <!--Nav-->
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -203,9 +200,7 @@
 
           </div>
       </footer>
-<?php else:
-    header("Location:".$_SERVER['DOCUMENT_ROOT']."/osepose/accueil.php");
-endif; ?>
+
 
 <!-- footer --->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/osepose/lib/footer.php'); ?>
