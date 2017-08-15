@@ -2,6 +2,9 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <a class="navbar-brand nav-image" href="#">
+        <img src="assets/img/ose-pose.png" class="osepose-logo" alt="logo">
+    </a>
 
     <!-- CSS NAVBAR -->
     <link href="assets/css/navbar.css" rel="stylesheet" />
@@ -9,7 +12,8 @@
     <input type="search" class="input-sm-form-control" placeholder="Rechercher">
     <button type="button">Validez</button>
 
-        <img src="assets/img/ose-pose.png" id="logo2" alt="logo">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"  >
 
         <ul class="nav justify-content-right" id="nav">
             <li class="nav-item">
