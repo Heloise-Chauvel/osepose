@@ -1,0 +1,112 @@
+
+#premier_defis{
+    margin-top: 120px;
+    height: 550px;
+}
+.defis{
+    background-color: #eeeeee;
+    height: 500px;
+    width: 1500px;
+    margin-top: 30px;
+    margin-left: 10px;
+    float: left;
+}
+.gauche{
+
+    margin-top: -10px;
+
+}
+.droite{
+    margin-left: -10px;
+    margin-top: -10px;
+
+}
+#fond{
+    background-color: darkgray;
+}
+.profil_1{
+
+    height: 60px;
+    margin-top: 10px;
+
+}
+.profil_2{
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.name_gauche{
+    margin-top: -90px;
+    color: #ffe436;
+
+}
+.name_droite{
+    margin-top: -95px;
+    color: #ffe436;
+}
+
+.defis_01{
+    float: left;
+    height: 500px;
+    width: 650px;
+
+}
+.time{
+    background-color: darkgray;
+    margin-left: 600px;
+    margin-top: 140px;
+    height: 200px;
+    width: 300px;
+    padding: 75px;
+}
+.defis_02{
+    height: 500px;
+    width: 650px;
+    margin-left: 850px;
+    margin-top: -340px;
+}
+.etoile_yellow{
+
+    margin-top: -25px;
+    margin-left: -55px;
+    height: 120px;
+}
+.etoile_white{
+    height: 120px;
+    margin-top: -25px;
+    margin-left: -55px;
+
+}
+h2{
+    margin-left: 100px;
+    padding-top: 50px;
+
+}
+h5{
+    text-align: center;
+}
+#chronotime{
+    text-align: center;
+    display: block;
+    margin: auto;
+    color: #ffe436;
+    font-size: 25px;
+}
+
+
+.vote_person{
+    color: #ffe436;
+    font-size: 50px;
+    margin-left: -140px;
+}
+.commentaire{
+    margin-left: 220px;
+    margin-top: -40px;
+    font-size: 20px;
+}
+.sport_lien{
+    color: darkgray;
+}
+
+

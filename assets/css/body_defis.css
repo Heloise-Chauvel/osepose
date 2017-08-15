@@ -1,0 +1,29 @@
+.fond_body{
+    background-color: darkgray;
+}
+
+.fond-jaune{
+    background-color: #eeeeee;
+    height: 600px;
+    width: 1000px;
+    margin-left: 240px;
+    margin-top: 100px;
+}
+h2{
+   padding-top: 20px;
+    text-align: center;
+    text-decoration-color: yellow;
+}
+.télécharger{
+    margin-left: 390px;
+    margin-top: 100px;
+
+}
+.intro{
+    margin-left: 300px;
+    margin-top: 20px;
+}
+.video_photo{
+
+       padding-top: 10px;
+}

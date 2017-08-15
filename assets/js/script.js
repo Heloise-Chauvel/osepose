@@ -2,11 +2,26 @@
  * Created by Héloïse on 04/08/2017.
  */
 $(document).ready(function(){
-    $(function() {
-        if ($('#bootstrapCssTest').is(':visible')) {
-            $("head").prepend('<link rel="stylesheet" href="/dist/css/bootstrap.min.css">');
-        }
+
+    //Countdown
+    $(document).ready(function() {
+        var challengeBegin = new Date();
+        var challengeEnd = new Date();
+        challengeEnd.setDate(challengeBegin.getDate()+1);
+
+        $('#chronotime').countdown(challengeEnd)
+        .on('update.countdown', function(event) {
+            var format = '%H:%M:%S';
+            $(this).html(event.strftime(format));
+        })
+        .on('finish.countdown', function(event) {
+            $(this).html('Défi terminé !!');
+
+        });
     });
+
+
+    //Carousel
     $('#carousel-sports').carousel();
     // Par défaut tout les messages d'erreurs sont masqués
     $("#noemail").hide();

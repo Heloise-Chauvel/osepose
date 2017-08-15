@@ -1,0 +1,7 @@
+DROP TABLE PRIMER_CARRIERE;/*creation 6*/
+
+/*Tables souvent utilisées*/
+CREATE TABLE SPORT
+(
+	NOM varchar(100) PRIMARY KEY,
+);

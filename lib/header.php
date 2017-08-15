@@ -8,6 +8,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <!--Rating plugin-->
+    <link href="dist/rating/css/star-rating.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="dist/rating/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
 
     <link href="assets/css/font.css" rel="stylesheet" />
     <link href="assets/css/perso.css" rel="stylesheet" />

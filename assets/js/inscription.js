@@ -6,7 +6,7 @@ $(document).ready(function(){
 				//status=true : inscription autorisé 
 				var status=true;
 				
-				// Tout les messages d'erreurs sont masqué avant les vérifications
+				// Tous les messages d'erreurs sont masqués avant les vérifications
 				$("#noemail").hide();
 				$("#falseemail").hide();
 				$("#nopwd1").hide();
@@ -24,7 +24,7 @@ $(document).ready(function(){
 				$("#exist-email").hide();
 				
 
-				// Pour chaque condition, si la condition est vrai, on affiche un message d'erreur
+				// Pour chaque condition, si la condition est vraie, on affiche un message d'erreur
 				// Et on met status à faux
 				
 				// Message lié à l'année de naissance
@@ -116,7 +116,7 @@ $(document).ready(function(){
 					// On vérifie que l'adresse e-mail n'éxiste pas et que le login est inconnu de la base
 					// Si les infos sont déjà connu on ne fait pas d'inscription
 					var request = $.ajax({
-					  url: "lib/AJAX/connexion/verif_info.php",
+					  url: "/osepose/lib/AJAX/connexion/verif_info.php",
 					  method: "POST",
 					  async: false,
 					  data: { email : $("#email-i").val() , login : $("#login-i").val() },
