@@ -14,9 +14,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 <!-- Bootstrap JS local fallback -->
 <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="dist/bootstrap.min.js"><\/script>')}</script>
-<!-- Rating plugin -->
-<script src="dist/rating/js/star-rating.js" type="text/javascript"></script>
-<script src="dist/rating/js/star-rating.min.js" type="text/javascript"></script>
 
 <!-- Bootstrap CSS local fallback -->
 <div id="bootstrapCssTest" class="hidden"></div>

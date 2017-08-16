@@ -3,6 +3,7 @@
  */
 $(document).ready(function(){
 
+
     //Countdown
     $(document).ready(function() {
         var challengeBegin = new Date();

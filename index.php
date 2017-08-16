@@ -37,7 +37,7 @@
     </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-perso">
     <div class="row">
         <div class="col-lg-7 carousel">
             <div id="carousel-sports" class="carousel slide" data-ride="carousel">
