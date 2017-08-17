@@ -7,7 +7,7 @@
         <?php include($_SERVER['DOCUMENT_ROOT'].'/osepose/lib/fonctions/navbar.php'); ?>
     </header>
 
-    <body class="fond_body">
+    <body #fond_body>
         <div class="fond-jaune">
             <h2>Il est temps de défier !!</h2>
             <p class="intro">
